@@ -22,7 +22,7 @@ module.exports = {
             const { valid, errors } = validateLoginInput(username, password);
 
             if (!valid) {
-                throw new UserInputError('Errors' , { errors });
+                throw new UserInputError('Credentials errors' , { errors });
             }
             
             // getting a user from mongodb
@@ -30,7 +30,7 @@ module.exports = {
 
             if (!user) {
                 errors.general = "User not found";
-                throw new UserInputError('User not found', { errors });
+                throw new UserInputError('User not found with these credentials', { errors });
             }
 
             // password match
