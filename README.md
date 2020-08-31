@@ -5,4 +5,5 @@ Creating a backend with node js and graphql for react js client. (learning graph
 2. install dependencies using ```npm install```
 3. run the code using ```npm run dev```
 
-# FINAL make some good PR
+# and then 
+### make some good PR
