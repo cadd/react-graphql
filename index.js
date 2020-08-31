@@ -14,7 +14,8 @@ const resolvers = require("./graphql/resolvers");
 // resolvers are like controllers for adding the mutation logic for get the work done
 const server = new ApolloServer({
     typeDefs: typesDef,
-    resolvers: resolvers
+    resolvers: resolvers,
+    context: ({ req }) => ({ req })
 })
 
 // @ connect to database
